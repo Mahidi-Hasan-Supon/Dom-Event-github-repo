@@ -12,5 +12,39 @@
     <button onclick="console.log('10')">Click on</button>
     <button onclick="console.log('Interested')">Click on</button>
     <input type="text" name="" id="">
+
+    <br>
+
+    <!-- <<<<< option 2 event handler>>>>>>> -->
+
+    <button onclick="makeYellow()">Click Here</button> 
+    <button onclick="makeRed()">Click it </button>
+    <br>
+    <button id="but-make-blue">click blue</button>
+    <br>
+    
+    <!-- option 4 addEventListener -->
+     <button id="btn-click-purple">Click purple</button>
+     <button id="btn-Make-gold">Make gold</button>
+    
+
+
+     <script>
+        document.getElementById('btn-click-purple').addEventListener('click',function makePurple(){
+            document.body.style.backgroundColor='purple'
+        })
+
+        document.getElementById('btn-Make-gold').addEventListener('click',function (){
+            document.body.style.backgroundColor='gold'
+        })
+     </script>
+
+    <script>
+        const makeBlue = document.getElementById('but-make-blue');
+        makeBlue.onclick = function makeBlue(){
+            document.body.style.background='blue'
+        }
+    </script>
+     
 </body>
 </html>

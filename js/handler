@@ -1,0 +1,15 @@
+document.getElementById("btn-click").addEventListener('click',function(){
+    console.log("button click")
+
+    const myTitleChange = document.getElementById('btn-title-name');
+     myTitleChange.innerText='My first title change'
+    
+    })
+
+
+document.getElementById('click-button').addEventListener('click',function(){
+        console.log('hello')
+        const changeP = document.getElementById('btn-p')
+        changeP.innerText = "change the paragraph"
+
+        })
