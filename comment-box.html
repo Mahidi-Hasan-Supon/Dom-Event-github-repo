@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My comment box</title>
+    <style>
+        .comment{
+            border: 2px solid skyblue;
+            background-color: aquamarine;
+            margin: 5px;
+            padding: 5px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>My comment awesome box</h1>
+    <section>
+        <h3>All comments here</h3>
+        <div id="comment-container">
+            <p class="comment">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur odio maiores ratione, eaque, labore fuga nulla architecto, provident quos similique fugiat aspernatur. Maiores, nisi. Ipsa consequuntur rerum quibusdam vitae explicabo.</p>
+            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta aut, quisquam quam iste eum saepe asperiores id in. Rerum inventore, ab aperiam blanditiis voluptatibus deserunt sequi suscipit quod molestiae magni?</p>
+            <p class="comment">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint eos excepturi necessitatibus repellat expedita deserunt. Blanditiis quae ratione assumenda commodi magni explicabo distinctio impedit laudantium? Eos debitis magni ipsam velit!</p>
+            <br>
+            <br>
+
+        </div>
+
+        <textarea name="" id="button-textarea" cols="30" rows="5"></textarea><br>
+        <button id="btn-post-comment">Post comment</button>
+
+    </section>
+
+    <script>
+        // step : 1 click the here button
+        document.getElementById('btn-post-comment').addEventListener('click',function(){
+            // step: 2 textarea add 
+            const commentTextBox = document.getElementById('button-textarea');
+            const NewcommentTextBox = commentTextBox.value;
+            // step: 3 get the comment you published
+            const commentContainer = document.getElementById('comment-container')
+            console.log(commentContainer)
+            // step : 4 create a comment a paragraph 
+            const commentElement = document.createElement('p');
+            commentElement.classList.add('comment')
+            commentElement.innerText =NewcommentTextBox;
+
+            // step :5 add koro
+           commentContainer.appendChild(commentElement)
+
+        //    step : 6 clean the comment
+         commentTextBox.innerText = '';
+
+
+
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

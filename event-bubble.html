@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubble</title>
+    <style>
+        body{
+            border: 2px solid sandybrown;
+            margin: 5px;
+            padding: 5px;
+        }
+        section{
+            border: 2px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+        h3{
+            border: 2px solid slateblue;
+            margin: 5px;
+            padding: 5px;
+        }
+        ul{
+            border: 2px solid blue;
+            margin: 5px;
+            padding: 5px;
+        }
+        li{
+            border: 2px solid green;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My event bubble</h1>
+    <section>
+        <h3>My list title</h3>
+    <ol id="ol-list">
+        <li id="list-1">My first list</li>
+        <li id="list-2">MY second list</li>
+        <li id="list-3"> My third list </li>
+        <li id="list-4">My fourth list</li>
+    </ol>
+    </section>
+    <script>
+        // handle li
+        document.getElementById('list-2'),addEventListener('click',function (){
+            console.log('type adkf........')
+        })
+        // handle ol 
+        document.getElementById('ol-list'),addEventListener('click',function (){
+            console.log('type adkf........')
+        })
+    
+    </script>
+</body>
+</html>
